@@ -1,0 +1,81 @@
+{
+   "Version":"1.0.1",
+   "ReleaseNotes":"",
+   "Premium":[
+      {
+         "Name":"SV PUDINFICADO 01",
+         "FLAG":"BR",
+         "ServerIP":"pudim.hyvozin.ml",
+         "ServerPort":"80",
+         "sslPort":"443",
+         "CloudFrontIP":"SEU_DOMÍNIO_CLOUDFRONT",
+         "AzionIP":"SEU_DOMÍNIO_AZION"
+      },
+      {
+         "Name":"SV PUDINFICADO 02",
+         "FLAG":"BR",
+         "ServerIP":"qnaxfree.sasksus.tk",
+         "ServerPort":"80",
+         "sslPort":"443",
+         "CloudFrontIP":"SEU_DOMÍNIO_CLOUDFRONT",
+         "AzionIP":"SEU_DOMÍNIO_AZION"
+      }
+   ],
+   "NetworksPremium":[
+      {
+         "Name":"CONEXÃO MODO PROXY",
+         "Payload":"GET / HTTP/1.1[crlf]Host: SBR_FRONT[crlf]Upgrade: Websocket[crlf]Connection: Upgrade[crlf][crlf]",
+         "Sni":"",
+         "Tlsip":"",
+         "ProxyIP":"recarga.vivo.com.br",
+         "ProxyPort":"80",
+         "CloudFront":"recarga.vivo.com.br",
+         "CloudAZ":"",
+         "tunnelType":"0"
+      },
+      {
+         "Name":"MODO DE CONEXÃO SSL NORMAL",
+         "Payload":"",
+         "Sni":"web.whatsapp.com",
+         "Tlsip":"",
+         "ProxyIP":"[app_host]",
+         "ProxyPort":"433",
+         "CloudFront":"",
+         "CloudAZ":"",
+         "tunnelType":"1"
+      },
+      {
+         "Name":"MODO DE CONEXÃO DIRECT NORMAL",
+         "Payload":"ACL buzzfeed.com HTTP/1.1[lf]Host:buzzfeed.com[lf]",
+         "Sni":"",
+         "Tlsip":"",
+         "ProxyIP":"[app_host]",
+         "ProxyPort":"80",
+         "CloudFront":"",
+         "CloudAZ":"",
+         "tunnelType":"2"
+      },
+      {
+         "Name":"MODO DE CONEXÃO DIRECT (WEBSOCKET)",
+         "Payload":"GET / HTTP/1.1[crlf]Host: SBR_HOST[crlf]Upgrade: websocket[crlf][crlf]",
+         "Sni":"",
+         "Tlsip":"",
+         "ProxyIP":"104.18.7.80",
+         "ProxyPort":"80",
+         "CloudFront":"",
+         "CloudAZ":"",
+         "tunnelType":"2"
+      },
+      {
+         "Name":"MODO DE CONEXÃO SSL + PAY",
+         "Payload":"GET wss://www.hbogo.com.br HTTP/1.1[crlf]Host: SBR_HOST[crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf][crlf]",
+         "Sni":"www.hbogo.com.br",
+         "Tlsip":"www.hbogo.com.br",
+         "ProxyIP":"www.hbogo.com.br",
+         "ProxyPort":"433",
+         "CloudFront":"",
+         "CloudAZ":"",
+         "tunnelType":"4"
+      }
+   ]
+}
